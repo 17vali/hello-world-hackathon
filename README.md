@@ -1,7 +1,7 @@
 # hello-world-hackathon
-A Discord bot coded in Node.js using the Discord.js Library and the Marvel Comics API.
+A Discord bot coded in Node.js using the Discord.js Library and Marvel Comics API.
 
-This project is in the early phase and I plan to further add more commands.
+This project is in early phase and I plan to further add more commands.
 
 Features-
 
