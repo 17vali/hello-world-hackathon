@@ -50,7 +50,7 @@ module.exports = class CharactersCommand extends BaseCommand {
 
         heroesList.forEach(hero =>{
           heroesStr = `${heroesStr}\n${hero.name}`
-        })
+        });
 
         const heroListEmbed = new EmbedBuilder()
           .setColor(0x0099FF)
@@ -86,7 +86,7 @@ module.exports = class CharactersCommand extends BaseCommand {
           .addFields(
             { name: 'Comics', value: comicsStr || '\u200B' },
           )
-          .setImage(heroThumbnail || '\u200B' )
+          .setImage(heroThumbnail || '\u200B' );
 
         message.channel.send({ embeds: [heroEmbed] });
       }
