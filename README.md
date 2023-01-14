@@ -5,9 +5,9 @@ This project is in the early phase and I plan to further add more commands.
 
 Features-
 
-1.!characters <character> <index> - fetching marvel comic characters by name + showing list of characters starting with <character> indexed
+1.!characters `character` `index` - fetching marvel comic characters by name + showing list of characters starting with `character` indexed
     
-2.!fav add <character> - using mongodb to store list of favourite characters and comics(still not implemented) of a particular user
+2.!fav add `character` - using mongodb to store list of favourite characters and comics(still not implemented) of a particular user
     
 3.!fav - list of a user's favourite characters fetched from the database
 
