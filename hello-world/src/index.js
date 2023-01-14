@@ -1,8 +1,14 @@
 
 const { Client, GatewayIntentBits } = require('discord.js');
 const { registerCommands, registerEvents } = require('./utils/registry');
-const config = require('../slappey.json');
+const config = require('../config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent,] });
+const mongoose = require('mongoose');
+
+mongoose.connect(`mongodb+srv://hello-world-bot:${config.mongoPassword}@hello-world-bot.cqux6wk.mongodb.net/test`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 (async () => {
   client.commands = new Map();

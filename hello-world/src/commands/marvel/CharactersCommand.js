@@ -1,7 +1,7 @@
 const BaseCommand = require('../../utils/structures/BaseCommand');
 const fetch = require('node-fetch');
 const base_url = 'http://gateway.marvel.com/v1/public';
-const config = require('../../../slappey.json');
+const config = require('../../../config.json');
 const ts = new Date().getTime();
 var CryptoJS = require("crypto-js");
 const str = ts + config.marvelPrivateKey + config.marvelApiKey;
@@ -35,7 +35,7 @@ module.exports = class CharactersCommand extends BaseCommand {
         .setFooter({ text: `displaying ${20*(index-1)+1}-${20*(index-1)+(response.data.count || 1)} results out of ${heroesTotal}` });
 
       message.channel.send({ embeds: [heroListEmbed] });
-    } else{
+    } else {
       const heroArg = isNaN(Number(args.slice(-1))) ? await args.join('%20') : args.slice(0,-1).join('%20');
       const hero = await getHero(heroArg);
 
